@@ -1,0 +1,66 @@
+targets:
+  calc_sequence:
+    - genders
+    - ages
+    - interests
+    - packages
+    ##### 务必注意，排除定向必须在所有定向配置的最后，它决定着计算准确性  #####
+    - excludePackages
+  category:
+    #定向域：性别的配置项
+    genders:
+      #100:全部 101:未知 102:男  103：女
+      dim_min: 100
+      dim_max: 103
+      dim_all: 100
+      dim_unknown: 101
+      single_value: true
+      operator_nor: false
+    #定向域：年龄的配置项
+    ages:
+      #200:全部 201:未知 202:0~18  203:19~25  204:26~35 205:36~45 206:>45
+      dim_min: 200
+      dim_max: 206
+      dim_all: 200
+      dim_unknown: 201
+      single_value: true
+      operator_nor: false
+    #定向域：兴趣的配置项
+    interests:
+      #10000:全部 10001：未知 10002：游戏  10003：小说  10004：美食  10005：运动  10006：电商  10007：其它
+      dim_min: 10000
+      dim_max: 10007
+      dim_all: 10000
+      dim_unknown: 10001
+      single_value: false
+      operator_nor: false
+    #定向域：人群包的配置项
+    packages:
+      #1000000:全部 1000001：未知 1000002：休闲游戏人群包  1000003：商旅人士人群包  1000004：奢饰品人群包
+      dim_min: 1000000
+      dim_max: 1000004
+      dim_all: 1000000
+      dim_unknown: 1000001
+      single_value: false
+      operator_nor: false
+    #定向域：排除人群包的配置项
+    excludePackages:
+      #1000000:全部 1000001：未知 1000002：休闲游戏人群包  1000003：商旅人士人群包  1000004：奢饰品人群包
+      alias: packages
+      dim_min: 1000000
+      dim_max: 1000004
+      dim_all: 1000000
+      dim_unknown: 1000001
+      single_value: false
+      operator_nor: true
+index-file:
+  index_name: wuliang.json
+  snapshot_path: /ad-index/data/snapshot/
+  history_path: /ad-index/data/snapshot-history/
+  dumper_path: /ad-index/data/dumper/
+kafka:
+  bootstrap_servers: kafka-server:29092
+  group_id: group1
+  topic: example
+  partition: 0
+  batch_size: 100

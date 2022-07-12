@@ -1,0 +1,11 @@
+{"timestamp":1653456849409,"incremental_sequence":0}
+{"adId":719629574,"adName":"adName719629574","status":0,"targets":{"ages":[205,206],"interests":[10003],"packages":[1000002]}}
+{"adId":487248664,"adName":"adName487248664","status":0,"targets":{"ages":[201,202],"genders":[103],"interests":[10002,10004,10007],"packages":[1000004]}}
+{"adId":1844244222,"adName":"adName1844244222","status":0,"targets":{"excludePackages":[1000003],"ages":[202,205],"genders":[101],"interests":[10002,10005,10007],"packages":[1000003,1000002]}}
+{"adId":869540070,"adName":"adName869540070","status":0,"targets":{"genders":[101],"interests":[10007],"packages":[1000004,1000002]}}
+{"adId":171483358,"adName":"adName171483358","status":0,"targets":{"ages":[206],"interests":[10001,10003,10004,10007],"packages":[1000004,1000001]}}
+{"adId":252209439,"adName":"adName252209439","status":1,"targets":{"excludePackages":[1000003,1000002],"ages":[205],"genders":[102],"interests":[10003,10004,10007],"packages":[1000004]}}
+{"adId":1429817765,"adName":"adName1429817765","status":1,"targets":{"excludePackages":[1000002],"interests":[10001,10003,10006,10007]}}
+{"adId":371636747,"adName":"adName371636747","status":1,"targets":{"excludePackages":[1000004,1000003],"interests":[10007],"packages":[1000002,1000001]}}
+{"adId":1251172861,"adName":"adName1251172861","status":1,"targets":{"excludePackages":[1000002],"ages":[202,205],"interests":[10002,10003,10004,10005,10007],"packages":[1000002]}}
+{"adId":1495371263,"adName":"adName1495371263","status":1,"targets":{"genders":[102],"interests":[10001,10002,10007]}}

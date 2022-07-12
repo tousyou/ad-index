@@ -1,0 +1,98 @@
+version: "3"
+services:
+  redis:
+      image: redis:latest
+      container_name: redis-server
+      ports:
+        - 6379:6379
+      volumes:
+        - ./redis/data:/data:rw
+      networks:
+        - canal-network
+  db:
+      platform: linux/amd64
+      image: mysql:latest
+      container_name: mysql-server
+      command: --default-authentication-plugin=mysql_native_password
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: lids
+      ports:
+        - 3306:3306
+      volumes:
+        - ./mysql/data:/var/lib/mysql:rw
+        - ./mysql/config:/etc/mysql/conf.d
+      networks:
+        - canal-network
+      
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    container_name: zookeeper-server
+    ports:
+      - 2181:2181
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    volumes:
+      - ./zookeeper/data:/bitnami/zookeeper
+    networks:
+      - canal-network
+
+  kafka:
+    image: 'bitnami/kafka:latest'
+    container_name: kafka-server
+    ports:
+      - 9092:9092
+    environment:
+      - KAFKA_BROKER_ID=1
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181
+      - ALLOW_PLAINTEXT_LISTENER=yes
+      - KAFKA_CFG_LISTENERS=INTERNAL://:29092,EXTERNAL://:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=INTERNAL://kafka-server:29092,EXTERNAL://localhost:9092
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
+      - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=INTERNAL
+    volumes:
+      - ./kafka/data:/bitnami/kafka
+
+    depends_on:
+      - zookeeper
+    networks:
+      - canal-network
+  canal:
+    image: canal/canal-server:latest
+    container_name: canal-server 
+    restart: always
+    volumes:
+      - ./canal/log:/home/admin/canal-server/logs:rw
+      - ./canal/conf/canal.properties:/home/admin/canal-server/conf/canal.properties
+      - ./canal/conf/example:/home/admin/canal-server/conf/example
+   
+    depends_on:
+      - redis
+      - kafka
+      - db 
+      - zookeeper
+    networks:
+      - canal-network
+  ad-index:
+    image: lids/ad-index:latest
+    container_name: index-server
+    ports:
+      - 8080:8080
+    restart: always
+    volumes:
+      - ./ad-index/conf/application.yml:/ad-index/application.yml
+      - ./ad-index/conf/logback.xml:/ad-index/logback.xml
+      - ./ad-index/data:/ad-index/data:rw
+      - ./ad-index/log:/ad-index/log:rw
+    
+    depends_on:
+      - canal
+      - redis
+      - kafka
+      - db
+      - zookeeper
+    networks:
+      - canal-network
+networks:
+  canal-network:
+    driver: bridge

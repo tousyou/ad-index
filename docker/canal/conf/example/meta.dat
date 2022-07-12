@@ -1,0 +1,1 @@
+{"clientDatas":[{"clientIdentity":{"clientId":1001,"destination":"example","filter":""},"cursor":{"identity":{"slaveId":-1,"sourceAddress":{"address":"mysql-server","port":3306}},"postion":{"gtid":"","included":false,"journalName":"mysql-bin.000015","position":651,"serverId":1,"timestamp":1653387054000}}}],"destination":"example"}

@@ -1,0 +1,140 @@
+2022-07-12 20:14:27 [main] INFO  lids.ad.wuliang.WuliangApplication - Starting WuliangApplication using Java 17.0.1 on Jack-2.local with PID 82354 (/Users/lids/IdeaProjects/ad-index/target/classes started by lids in /Users/lids/IdeaProjects/ad-index)
+2022-07-12 20:14:27 [main] INFO  lids.ad.wuliang.WuliangApplication - The following 1 profile is active: "-dev"
+2022-07-12 20:14:27 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2022-07-12 20:14:27 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2022-07-12 20:14:27 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-12 20:14:27 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-07-12 20:14:28 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-12 20:14:28 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 924 ms
+2022-07-12 20:14:28 [main] INFO  lids.ad.wuliang.model.AdInvertedIndex - AdInvertedIndex Constructor
+2022-07-12 20:14:28 [main] INFO  lids.ad.wuliang.service.IndexService - IndexService Constructor
+2022-07-12 20:14:28 [main] INFO  lids.ad.wuliang.model.AdInvertedIndex - AdInvertedIndex Constructor
+2022-07-12 20:14:28 [main] INFO  lids.ad.wuliang.service.IndexService - IndexService Constructor
+2022-07-12 20:14:28 [main] INFO  lids.ad.wuliang.service.IndexServiceManager - IndexServiceManager Constructor
+2022-07-12 20:14:28 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2022-07-12 20:14:28 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2022-07-12 20:14:28 [main] INFO  lids.ad.wuliang.WuliangApplication - Started WuliangApplication in 1.755 seconds (JVM running for 2.69)
+2022-07-12 20:14:28 [scheduling-1] INFO  lids.ad.wuliang.service.AppRunner - return ad.size=0,query by AdRequest [reqId=904070538, uid=90407053, userProfile={ages=204, interests=[10002, 10003, 10005, 10006]}, location=null, device=null, app=null, limit=null]
+2022-07-12 20:14:28 [main] INFO  org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 1000
+	auto.offset.reset = earliest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-group1-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = group1
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.IntegerDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 40000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 30000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-07-12 20:14:28 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.1.0
+2022-07-12 20:14:28 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 37edeed0777bacb3
+2022-07-12 20:14:28 [main] INFO  org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1657628068542
+2022-07-12 20:14:28 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:28 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:28 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:28 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:28 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:28 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:28 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:28 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:28 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:29 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:29 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:29 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:29 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:29 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:29 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:30 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:30 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:30 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:31 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:31 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:31 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:32 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:32 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:32 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected
+2022-07-12 20:14:33 [main] INFO  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Node -1 disconnected.
+2022-07-12 20:14:33 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Connection to node -1 (/127.0.0.1:9092) could not be established. Broker may not be available.
+2022-07-12 20:14:33 [main] WARN  org.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-group1-1, groupId=group1] Bootstrap broker 127.0.0.1:9092 (id: -1 rack: null) disconnected

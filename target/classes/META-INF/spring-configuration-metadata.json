@@ -1,0 +1,77 @@
+{
+  "groups": [
+    {
+      "name": "index-file",
+      "type": "lids.ad.wuliang.config.IndexFile",
+      "sourceType": "lids.ad.wuliang.config.IndexFile"
+    },
+    {
+      "name": "kafka",
+      "type": "lids.ad.wuliang.config.Kafka",
+      "sourceType": "lids.ad.wuliang.config.Kafka"
+    },
+    {
+      "name": "targets",
+      "type": "lids.ad.wuliang.config.Target",
+      "sourceType": "lids.ad.wuliang.config.Target"
+    }
+  ],
+  "properties": [
+    {
+      "name": "index-file.dumper-path",
+      "type": "java.lang.String",
+      "sourceType": "lids.ad.wuliang.config.IndexFile"
+    },
+    {
+      "name": "index-file.history-path",
+      "type": "java.lang.String",
+      "sourceType": "lids.ad.wuliang.config.IndexFile"
+    },
+    {
+      "name": "index-file.index-name",
+      "type": "java.lang.String",
+      "sourceType": "lids.ad.wuliang.config.IndexFile"
+    },
+    {
+      "name": "index-file.snapshot-path",
+      "type": "java.lang.String",
+      "sourceType": "lids.ad.wuliang.config.IndexFile"
+    },
+    {
+      "name": "kafka.batch-size",
+      "type": "java.lang.Integer",
+      "sourceType": "lids.ad.wuliang.config.Kafka"
+    },
+    {
+      "name": "kafka.bootstrap-servers",
+      "type": "java.lang.String",
+      "sourceType": "lids.ad.wuliang.config.Kafka"
+    },
+    {
+      "name": "kafka.group-id",
+      "type": "java.lang.String",
+      "sourceType": "lids.ad.wuliang.config.Kafka"
+    },
+    {
+      "name": "kafka.partition",
+      "type": "java.lang.Integer",
+      "sourceType": "lids.ad.wuliang.config.Kafka"
+    },
+    {
+      "name": "kafka.topic",
+      "type": "java.lang.String",
+      "sourceType": "lids.ad.wuliang.config.Kafka"
+    },
+    {
+      "name": "targets.calc-sequence",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "lids.ad.wuliang.config.Target"
+    },
+    {
+      "name": "targets.category",
+      "type": "java.util.Map<java.lang.String,lids.ad.wuliang.config.Category>",
+      "sourceType": "lids.ad.wuliang.config.Target"
+    }
+  ],
+  "hints": []
+}

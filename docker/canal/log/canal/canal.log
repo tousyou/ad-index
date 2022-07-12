@@ -1,0 +1,5 @@
+2022-05-27 18:30:54.677 [Thread-6] INFO  com.alibaba.otter.canal.deployer.CanalStarter - ## stop the canal server
+2022-05-27 18:30:54.682 [Thread-7] INFO  c.a.o.canal.connector.kafka.producer.CanalKafkaProducer - ## stop the kafka producer
+2022-05-27 18:30:54.943 [Thread-7] INFO  c.a.o.canal.connector.kafka.producer.CanalKafkaProducer - ## kafka producer is down.
+2022-05-27 18:30:56.112 [Thread-6] INFO  com.alibaba.otter.canal.deployer.CanalController - ## stop the canal server[192.168.32.6(192.168.32.6):11111]
+2022-05-27 18:30:56.166 [Thread-6] INFO  com.alibaba.otter.canal.deployer.CanalStarter - ## canal server is down.
